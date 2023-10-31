@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.net.MediaType;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -85,54 +87,7 @@ public class MainActivity extends AppCompatActivity {
         messageList.remove(messageList.size()-1);
         addtochat(response,Message.SEND_BY_BOT);
     }
-
-
-    /* void callApi(String question){
-         JSONObject jsonBody=new JSONObject();
-         try {
-             jsonBody.put("model","text-davinci-003");
-             jsonBody.put("promt",question);
-             jsonBody.put("max_tokens",500);
-             jsonBody.put("tempreture",0);
-         } catch (JSONException e) {
-             e.printStackTrace();
-         }
-         RequestBody body =RequestBody.create(jsonBody.toString(),JSON);
-         Request request=new Request.Builder()
-                 .url("https://api.openai.com/v1/chat/completions")
-                 .header("Authorization","Bearer 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")
-                 .post(body)
-                 .build();
-
-         client.newCall(request).enqueue(new Callback() {
-             @Override
-             public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                 addResponce("Failed to response due to "+e.getMessage());
-             }
-
-             @Override
-             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                 if(response.isSuccessful()){
-                     JSONObject jsonObject= null;
-                     try {
-                         jsonObject = new JSONObject(response.body().string());
-                         JSONArray jsonArray= jsonObject.getJSONArray("choice");
-                         String result = jsonArray.getJSONObject(0).getString("text");
-                         addResponce(result.trim());
-                     } catch (JSONException e) {
-                         e.printStackTrace();
-                     }
-
-                 }else{
-                     addResponce("Failed to response due to "+response.body().toString());
-                 }
-
-             }
-         });
-
-
-
-     }
+    /*
 Bearer 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
      */
     void callAPI1(String question){
@@ -151,7 +106,7 @@ Bearer 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
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization","API KEY HERE")
+                .header("Authorization","Bearer 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")
                 .post(body)
                 .build();
 
