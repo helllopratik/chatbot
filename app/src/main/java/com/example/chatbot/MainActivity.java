@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
 
      }
-
+Bearer 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
      */
     void callAPI1(String question){
         //okhttp
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization","Bearer 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")
+                .header("Authorization","API KEY HERE")
                 .post(body)
                 .build();
 
