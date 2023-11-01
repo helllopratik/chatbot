@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         addtochat(response,Message.SEND_BY_BOT);
     }
     /*
-Bearer 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
+Bearer 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
      */
     void callAPI1(String question){
         //okhttp
@@ -106,7 +106,7 @@ Bearer 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
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization","Bearer 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")
+                .header("Authorization","Bearer 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")
                 .post(body)
                 .build();
 
